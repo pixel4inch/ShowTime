@@ -1,12 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {assets} from '../assets/assets'
-import { MenuIcon, Scroll, SearchIcon, XIcon } from 'lucide-react'
+import { MenuIcon, Scroll, SearchIcon, UserRoundSearch, XIcon } from 'lucide-react'
+import { useClerk, UserButton, useUser } from '@clerk/clerk-react'
 
 function Header() {
 
   const [isOpen, setIsOpen]= React.useState(false)
 
+  const {user} = useUser()
+
+  const {openSignIn} = useClerk()
 
   return (
     <div className="fixed w-full top-0 top-0 left-0 z-50 flex justify-between items-center px-6 md:px-16 lg:px-36 py-5">
@@ -30,7 +34,29 @@ function Header() {
         {/*--search  & Login- */}
         <div className='flex justify-between align-middle gap-8'>
          <SearchIcon className='cursor-pointer  w-6 h-6 max-md:hidden'/>
-        <button className=' cursor-pointer px-4 py-1 sm-px-7 sm-py-2 bg-pirmary hover:bg-primary-dull rounded-full transition font-medium'>LogIn</button>
+
+          {
+              !user ? 
+
+              (
+
+
+        <button onClick={openSignIn} className=' cursor-pointer px-4 py-1 sm-px-7 sm-py-2 bg-pirmary hover:bg-primary-dull rounded-full transition font-medium'>LogIn</button>
+              ):
+
+              (
+                    <UserButton></UserButton>
+
+              )
+              
+
+
+          }
+
+
+
+
+
         
       </div>
       {/* --- Mobile Menu--- */}
