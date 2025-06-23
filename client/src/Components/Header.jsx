@@ -1,12 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate,  } from 'react-router-dom'
 import {assets} from '../assets/assets'
-import { MenuIcon, Scroll, SearchIcon, UserRoundSearch, XIcon } from 'lucide-react'
+import { MenuIcon, Scroll, SearchIcon, Ticket, TicketPlus, UserRoundSearch, XIcon } from 'lucide-react'
 import { useClerk, UserButton, useUser } from '@clerk/clerk-react'
 
 function Header() {
 
   const [isOpen, setIsOpen]= React.useState(false)
+
+  const navtagate = useNavigate()
 
   const {user} = useUser()
 
@@ -45,7 +47,17 @@ function Header() {
               ):
 
               (
-                    <UserButton></UserButton>
+                    <UserButton>
+                              <UserButton.MenuItems>
+                                <UserButton.Action 
+                                  label='My Booking' labelIcon={<TicketPlus width={15}/>}
+                                  onClick={ () => navtagate ('/mybooing')}>
+                                </UserButton.Action>
+                              </UserButton.MenuItems>
+
+
+
+                    </UserButton>
 
               )
               
