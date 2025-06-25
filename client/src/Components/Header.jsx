@@ -55,8 +55,6 @@ function Header() {
                                 </UserButton.Action>
                               </UserButton.MenuItems>
 
-
-
                     </UserButton>
 
               )

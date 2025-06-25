@@ -1,10 +1,11 @@
 import React from 'react'
-import { Hero } from '../Components'
+import { FeaturedSection, Hero } from '../Components'
 
 function Home() {
   return (
     <>
     <Hero/>
+    <FeaturedSection/>
     
     </>
   )
