@@ -43,7 +43,7 @@ function Header() {
               (
 
 
-        <button onClick={openSignIn} className=' cursor-pointer px-4 py-1 sm-px-7 sm-py-2 bg-pirmary hover:bg-primary-dull rounded-full transition font-medium'>LogIn</button>
+        <button onClick={openSignIn} className=' cursor-pointer px-4 py-1 sm-px-7 sm-py-2 bg-primary hover:bg-primary-dull rounded-full transition font-medium'>LogIn</button>
               ):
 
               (

@@ -36,11 +36,10 @@ function Hero() {
 
 
           <div>
-            <button onClick={ () => navgate('/movies')}className='flex justify-center items-center gap-2 px-6 py-3 text-sm bg-pirmary hover:bg-primary-dull transition  font-medium cursor-pointer  rounded-full'>
+            <button onClick={ () => navgate('/movies')}className='flex justify-center items-center gap-2 px-6 py-3 text-sm bg-primary hover:bg-primary-dull transition  font-medium cursor-pointer  rounded-full'>
                 
                 Explore Movies
                 <ArrowRight className='w-5 h-5'></ArrowRight>
-                
                 </button>
         </div>
 
