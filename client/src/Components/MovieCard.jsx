@@ -15,7 +15,7 @@ function MovieCard({ movie }) {
         className='w-full object-cover object-right-bottom cursor-pointer h-52 rounded-2xl'
       />
 
-      <p className='font-semibold text-md l'>{movie.title}</p>
+      <p className='font-semibold text-md truncate mt-2'>{movie.title}</p>
 
       
     </div>
