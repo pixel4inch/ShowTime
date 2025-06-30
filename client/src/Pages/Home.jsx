@@ -1,11 +1,13 @@
 import React from 'react'
-import { FeaturedSection, Hero } from '../Components'
+import { FeaturedSection, Hero, TrailerSection } from '../Components'
+
 
 function Home() {
   return (
     <>
     <Hero/>
     <FeaturedSection/>
+    <TrailerSection/>
     
     </>
   )

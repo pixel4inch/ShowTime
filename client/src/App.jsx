@@ -13,7 +13,6 @@ import {Toaster} from 'react-hot-toast'
 function App() {
 
   const isAdminRoute = useLocation().pathname.startsWith('/admin')
-
   return (
     <>
     <Toaster/>
@@ -27,8 +26,7 @@ function App() {
         <Route path='/mybookings' element={<MyBookings/>}/>
         <Route path='/admin' element={<Admin/>}/>
        </Routes>
-     {/* {isAdminRoute ?<AdminFooter/> : <Footer/>  } */}
-     
+      {isAdminRoute ?<AdminFooter/> : <Footer/> } 
     </>
   );
 }

@@ -14,7 +14,7 @@ function FeaturedSection() {
     <>
     
     <div className="px-6 md:px-16 lg:px-24 xl:px-44">
-    <div className='relative flex items-center justify-between pt-20 pb-10'>
+    <div className='relative flex items-start justify-between pt-20 pb-10'>
         <p className='text-gray-300 text-lg font-medium '>Now Showing</p>
          <BlurCircle top="0" right="-80px" />
          
@@ -25,18 +25,17 @@ function FeaturedSection() {
                 
       
     </div>
-    <div className='flex justify-between gap-4 align-top'>
-      {dummyShowsData.slice(0,4).map((show) => 
+    <div className='flex justify-center md:justify-between  gap-2 align-top flex-wrap'>
+      {dummyShowsData.slice(0,6).map((show) => 
         (
           <MovieCard key={show._id} movie={show} />
-
         ))}
 
       <MovieCard/>
 
     </div>
 
-    <div className='flex align-center justify-center w-full'>
+    <div className='flex align-center justify-center w-full mt-20'>
 
         <button onClick={() => navgation('/movies')} className='bg-primary hover:bg-primary-dull transition rounded-sm px-6 py-2 cursor-pointer text-sm'>
             Show More
