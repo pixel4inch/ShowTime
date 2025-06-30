@@ -7,7 +7,7 @@ function Footer() {
                 <div className="md:max-w-96">
                     <img className="w-36 h-auto" src={assets.logo} alt="logo" className="w-36 h-auto" />
                     <p className="mt-6 text-sm">
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        ShowTime – Your go-to destination for hassle-free movie ticket bookings. Explore the latest releases, choose your favorite seats, and book in seconds — all from the comfort of your device.
                     </p>
                     <div className="flex items-center gap-2 mt-4">
                         <img src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/refs/heads/main/assets/appDownload/googlePlayBtnBlack.svg" alt="google play" className="h-10 w-auto border border-white rounded" />
