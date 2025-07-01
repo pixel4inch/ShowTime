@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 
 {/*=== COMPONENTS & PAGES=== */}
 import {Header, Footer, AdminHeader, AdminFooter} from './Components';
-import {Home, Favorite,Movies, MovieDetails, SeatLayout, MyBookings, Admin } from './Pages';
+import {Home, Favorite, Movies, MovieDetails, SeatLayout, MyBookings, Admin, ContactUs, Aboutus, PrivacyPolicy } from './Pages';
 
 {/*=== DEPENDENCES = */}
 
@@ -25,6 +25,9 @@ function App() {
         <Route path='/movies/:id/:date' element={<SeatLayout/>}/>
         <Route path='/mybookings' element={<MyBookings/>}/>
         <Route path='/admin' element={<Admin/>}/>
+         <Route path='/contactus' element={<ContactUs/>}/>
+         <Route path='/aboutus' element={<Aboutus/>}/>
+          <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
        </Routes>
       {isAdminRoute ?<AdminFooter/> : <Footer/> } 
     </>

@@ -6,9 +6,8 @@ import MovieCard from './MovieCard'
 import { dummyShowsData } from '../assets/assets'
 
 function FeaturedSection() {
-
     const navgation = useNavigate()
-    console.log(dummyShowsData)
+   
 
   return (
     <>
@@ -31,7 +30,7 @@ function FeaturedSection() {
           <MovieCard key={show._id} movie={show} />
         ))}
 
-      <MovieCard/>
+    
 
     </div>
 

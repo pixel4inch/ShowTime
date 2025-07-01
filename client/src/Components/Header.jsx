@@ -10,7 +10,6 @@ function Header() {
   const navtagate = useNavigate()
   const {user} = useUser()
   const {openSignIn} = useClerk()
-
   const [background, setBackground] = useState(false)
 
   const handleScroll = () => {
@@ -24,7 +23,6 @@ function Header() {
   useEffect(() => {
     // Attach the scroll listener
     window.addEventListener('scroll', handleScroll);
-
     // Clean up listener on component unmount
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

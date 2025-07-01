@@ -16,7 +16,7 @@ function TrailerSection() {
       </div>
 
       <div className="w-full md:max-w-full md:max-h-full relative">
-        <BlurCircle top="-20" right="-80px" />
+        <BlurCircle top="-50" right="-80px" />
          <ReactPlayer url={DummyTrailer.videoUrl} controls={false} width="100%" className="h-[250px] md:h-[500px] xl:h-[420px]:" />
       </div>
 
