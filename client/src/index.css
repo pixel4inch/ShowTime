@@ -26,3 +26,8 @@
     background: #09090B;
   }
 
+
+  .haderNavbar a.active{
+    color: var(--color-primary) !important
+  }
+
