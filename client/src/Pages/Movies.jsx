@@ -21,8 +21,9 @@ function Movies() {
   ) :
   (
     <div>
-
-       no data
+      <div className="px-6 md:px-16 lg:px-24 xl:px-44 mt-56">
+        <h1 className="text-center text-gray-300 text-4xl ">No Movies Found</h1>
+       </div>
     </div>
   )
 }

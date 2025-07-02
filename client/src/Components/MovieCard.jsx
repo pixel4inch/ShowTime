@@ -11,7 +11,7 @@ function MovieCard({ movie }) {
   return (
     <div className="flex flex-col justify-between gap-1 p-3  bg-gray-800 hover:-translate-y-1 rounded-2xl w-66 transition">
       <img
-        onClick={() => navigate(`/movie/${movie._id}`)}
+        onClick={() => navigate(`/movies/${movie._id}`)}
         src={movie.backdrop_path}
         alt={movie.title || 'Movie'}
         className='w-full object-cover object-right-bottom cursor-pointer h-52 rounded-2xl'
