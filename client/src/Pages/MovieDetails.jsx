@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom';
 import { dummyShowsData, dummyDateTimeData } from '../assets/assets';
 import { PlayCircleIcon, StarIcon, TicketCheckIcon, HeartIcon } from 'lucide-react';
 import timeFormat from '../Libs/timeFormat';
-import {BlurCircle } from '../Components';
+import {BlurCircle, FavoriteCast } from '../Components';
+
 
 
 
@@ -64,6 +65,8 @@ function MovieDetails() {
           </div> 
     
       </div>
+
+      <FavoriteCast/>
         
       </div>
 
