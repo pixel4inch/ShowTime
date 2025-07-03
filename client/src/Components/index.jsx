@@ -8,4 +8,5 @@ export {default as BlurCircle} from './BlurCircle'
 export {default as MovieCard} from './MovieCard'
 export {default as TrailerSection} from './TrailerSection'
 export {default as FavoriteCast} from './FavoriteCast'
+export {default as DateSelected} from './DateSelected'
 
