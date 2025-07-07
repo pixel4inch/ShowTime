@@ -63,13 +63,19 @@ function MovieDetails() {
            </div>
 
           </div> 
-    
       </div>
 
       <FavoriteCast/>
-
       <DateSelected dateTime={show.dateTime} id={show.movie._id}/>
+
+
+      <div className="relative flex items-start justify-between pt-20 pb-10">
+         <p class="text-gray-300 text-lg font-medium ">Your Favorite Cast</p>
+      </div>
+
         
+
+
       </div>
 
      
