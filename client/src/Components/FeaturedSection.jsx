@@ -22,8 +22,6 @@ function FeaturedSection() {
              View All 
              <ArrowRight className='w-4.5 h-4.5 group-hover:translate-x-0.5 transition '/>
            </button>
-                
-      
     </div>
     <div className='flex justify-center md:justify-between  gap-2 align-top flex-wrap'>
       {dummyShowsData.slice(0,6).map((show) => 

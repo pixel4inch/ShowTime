@@ -12,8 +12,8 @@ function MovieDetails() {
 
   const {id} = useParams()
   const [show, setShow] = useState(null)
-  const[favorite, setFavorite] = useState(false)
 
+  const[favorite, setFavorite] = useState(false)
   const pathSegments = location.pathname.split('/');
   const currentId = pathSegments[pathSegments.length - 1];
 
