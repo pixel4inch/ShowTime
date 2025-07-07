@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { dummyShowsData, dummyDateTimeData } from '../assets/assets';
 import { PlayCircleIcon, StarIcon, TicketCheckIcon, HeartIcon } from 'lucide-react';
 import timeFormat from '../Libs/timeFormat';
-import {BlurCircle, DateSelected, FavoriteCast } from '../Components';
+import {BlurCircle, DateSelected, FavoriteCast, MovieCard } from '../Components';
 
 
 
@@ -13,10 +13,14 @@ function MovieDetails() {
   const {id} = useParams()
   const [show, setShow] = useState(null)
   const[favorite, setFavorite] = useState(false)
-  
+
+  const pathSegments = location.pathname.split('/');
+  const currentId = pathSegments[pathSegments.length - 1];
+
+  const   navigate = useNavigate();
+
 
   const toggleFavorite = () => {
-
     setFavorite(!favorite);
     
   }
@@ -70,10 +74,24 @@ function MovieDetails() {
 
 
       <div className="relative flex items-start justify-between pt-20 pb-10">
-         <p class="text-gray-300 text-lg font-medium ">Your Favorite Cast</p>
+         <p class="text-gray-300 text-lg font-medium ">You May Also Like</p>
       </div>
 
-        
+      <div className="flex flex-col  flex-wrap md:flex-row lg:flex-row xl:flex-row justify-between items-center gap-4">
+          {
+            dummyShowsData.filter((data) => data._id !== currentId).map((data) =>(
+              <MovieCard key={data._id} movie={data} />
+            ))
+          }
+
+      </div>
+
+      <div className="flex align-center justify-center w-full mt-20">
+        <button onClick={() => {navigate(`/movies`); scrollTo(0,0)}} class="bg-primary hover:bg-primary-dull transition rounded-sm px-6 py-2 cursor-pointer text-sm">Show More</button>
+       </div>
+
+
+      
 
 
       </div>

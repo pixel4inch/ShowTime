@@ -16,8 +16,10 @@ function App() {
   return (
     <>
     <Toaster/>
-    {isAdminRoute ? <AdminHeader/> : <Header/>}
+      
+      {isAdminRoute ? <AdminHeader/> : <Header/>}
        <Routes>
+      
         <Route path='/' element={<Home/>}/>
         <Route path='/favorite' element={<Favorite/>}/>
         <Route path='/movies' element={<Movies/>}/>
@@ -28,6 +30,7 @@ function App() {
          <Route path='/contactus' element={<ContactUs/>}/>
          <Route path='/aboutus' element={<Aboutus/>}/>
           <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
+          
        </Routes>
       {isAdminRoute ?<AdminFooter/> : <Footer/> } 
     </>
